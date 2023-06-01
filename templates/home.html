@@ -10,16 +10,23 @@
         height: 320px;
         width: 100%;
         object: fit cover;
+        margin-bottom:16px;
       }
     </style>
     <title>Careers</title>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id = "banner"src ="https://newapplicatiowebsite-1--shanmukhasrini4.repl.co/static/banner.jpg.jpg">
     <div class="container">
       <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers</h1>
-      <img class="img-fluid" id = "banner"src ="https://newapplicatiowebsite-1--shanmukhasrini4.repl.co/static/banner.jpg.jpg">
-      <h2 class="text-center">About GKDSS</h2>
+      <div class="row" style="margin-bottom:16px;">
+        <div class="col-md-6">
       <p class="lead">Grades and Knowledge: Department Score Tracking System (GKDSS) is a web-based application for managing student grades and knowledge within an educational institution. It enables administrators to input and track student grades, attendance, and feedback. GKDSS generates reports and progress summaries, facilitating academic monitoring and identifying areas for improvement. The system streamlines administrative tasks, saving time and improving efficiency.</p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpg" style="height:320px;border-radius:4px;">
+      </div>
       <h2 class="text-center mt-2 mb-4">Job Openings</h2>
       <div style="margin-bottom:16px;">
         {% for job in jobs %}
@@ -27,10 +34,9 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact us</button>
-        <p class= "mt-4">
-          copyright@2023 gkdss
-        </p>
+        <a class="btn btn-primary btn-lg"
+          href="mailto:20bq1a4931@vvit.net?subject=Question%20about%20job%20openings&body=Name%3A%20%3CYour%20name%3E%0D%0AEnter%20your%20Query%3A%3CYour%20query%3E">Contact us</a>
+        {% include 'footer.html' %}
       </div>
     </div>
   </body>
